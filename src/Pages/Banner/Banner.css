@@ -5,72 +5,7 @@
       center/cover no-repeat;
   color: #fff;
 }
-.top-nav a {
-  color: #fff;
-}
-.brand-and-navBtn {
-  background: rgb(28, 27, 27);
-  position: relative;
-  z-index: 999;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
-  font-size: 24px;
-  padding: 15px 25px;
-  color: var(--white);
-}
-.brand-name {
-  letter-spacing: 5px;
-  cursor: pointer;
-}
-.navBtn {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--white);
-  cursor: pointer;
-}
-.navBtn:hover {
-  background: #fff;
-  color: #000;
-  transition: var(--transition);
-}
-.top-nav {
-  background: #000;
-  transform: translateY(-600px);
-  transition: var(--transition);
-}
-.showNav {
-  transform: translateY(0);
-}
-.search-icon {
-  display: none;
-}
-.top-nav ul li {
-  padding: 10px 0;
-}
-.top-nav ul a {
-  position: relative;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  display: block;
-}
-.top-nav ul a::after {
-  content: "";
-  height: 2px;
-  background: var(--lightGreen);
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  transition: var(--transition);
-}
-.top-nav ul a:hover::after {
-  width: 100px;
-}
+
 .about-content img {
   width: 140px;
   height: 140px;
@@ -86,19 +21,14 @@
   margin: 0 auto;
 }
 .about-content h2 {
-  font-size: 48px;
   text-align: center;
-  margin-bottom: 35px;
-  color: var(--lightGreen);
+  color: #fff;
 }
 .about-content h3 {
   color: #fff;
-  font-size: 30px;
   font-weight: 100;
   background: rgba(255, 255, 255, 0.1);
   width: 400px;
-  margin: 35px auto;
-  text-align: center;
 }
 blockquote {
   font-size: 20px;
@@ -116,8 +46,6 @@ blockquote span {
 }
 .social-icons {
   width: 350px;
-  margin: 40px auto 0 auto;
-  padding-bottom: 30px;
 }
 .social-icons ul a {
   color: #fff;
@@ -130,13 +58,13 @@ blockquote span {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--transition);
+  transition: all 0.5s ease;
 }
 .social-icons ul {
   display: flex;
   justify-content: space-around;
 }
-.social-icons ul a:hover {
-  background: var(--lightGreen);
-  border-color: var(--lightGreen);
+.social-icons ul .link:hover {
+  /* background: rgb(1, 87, 144, 1); */
+  border-color: rgb(1, 87, 144, 1);
 }
