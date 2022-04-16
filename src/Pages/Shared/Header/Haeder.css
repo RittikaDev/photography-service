@@ -13,7 +13,7 @@
   --border: #e9ecef;
 }
 #header {
-  background: #000 !important;
+  background: rgb(12, 11, 11) !important;
 }
 .nav-brand {
   font-family: "DM Sans", sans-serif;
