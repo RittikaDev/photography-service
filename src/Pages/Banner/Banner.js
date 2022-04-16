@@ -11,10 +11,10 @@ import {
 
 const Banner = () => {
   return (
-    <header class="header">
-      <div class="container about mt-0">
-        <div class="about-content">
-          <div class="about-img flex mb-2">
+    <header className="header">
+      <div className="container about mt-0">
+        <div className="about-content">
+          <div className="about-img flex mb-2">
             <img
               src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
               alt="photographer img"
@@ -37,7 +37,7 @@ const Banner = () => {
           </blockquote>
         </div>
 
-        <div class="social-icons mx-auto mt-3 pe-3">
+        <div className="social-icons mx-auto mt-3 pe-3">
           <ul>
             <NavLink className="link">
               <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>

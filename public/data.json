@@ -9,7 +9,7 @@
   {
     "id": 2,
     "name": "OutDoor",
-    "description": "Outdoor events are a great way to bind with nature. I can help you with the decoration and set up.",
+    "description": "Outdoor events are a great way to bind with nature.",
     "image": "https://images.unsplash.com/photo-1541696456191-068acf3414c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
     "price": "$355"
   },
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "name": "Events",
-    "description": "For birthdays and official gatherings.",
+    "description": "For birthdays and any sorts of official gatherings.",
     "image": "https://images.unsplash.com/photo-1534014003122-b516fbde05d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     "price": "$320"
   },
