@@ -4,6 +4,7 @@ import Header from "./Pages/Shared/Header/Header";
 import Banner from "./Pages/Banner/Banner";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Services from "./Pages/Services/Services";
+import Works from "./Pages/Works/Works";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header></Header>
       <Banner></Banner>
       <Services></Services>
+      {/* <Works></Works> */}
       <Footer></Footer>
     </>
   );
