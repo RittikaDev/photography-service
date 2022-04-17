@@ -4,7 +4,7 @@ import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
-import CustomLink from "../../../CustomLink/CustomLink";
+import CustomLink from "../../CustomLink/CustomLink";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -24,8 +24,8 @@ const Header = () => {
               <CustomLink to="/banner" className="nav-link">
                 Home
               </CustomLink>
-              <CustomLink className="nav-link" to="/recent">
-                Category
+              <CustomLink className="nav-link" to="/blogs">
+                Blogs
               </CustomLink>
               <CustomLink className="nav-link" to="/about">
                 About

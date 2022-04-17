@@ -137,7 +137,7 @@ const Login = () => {
         </div>
         <p>
           Already have an account?
-          <Link to="/login">Login</Link>
+          <Link to="/signup">Login</Link>
         </p>
         <p>
           Fogot Password?{" "}
