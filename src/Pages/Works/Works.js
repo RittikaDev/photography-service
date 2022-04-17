@@ -25,66 +25,66 @@ const Works = () => {
           <div className="">
             <div className="portfolio-grid row row-cols-1 row-cols-md-3 px-4 mt-5 ms-5">
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={wedding}
                   alt=""
                   style={{ width: "330px" }}
                 />
               </div>
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={wildlife}
                   alt=""
                   style={{ width: "330px" }}
                 />
               </div>
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={nature}
                   alt=""
                   style={{ width: "330px" }}
                 />
               </div>
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={outdoor}
                   alt=""
                   style={{ width: "330px" }}
                 />
               </div>
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={birthday}
                   alt=""
                   style={{ width: "330px" }}
                 />
               </div>
               <div
-                class="card"
+                className="card"
                 style={{ width: "330px", height: "250px", margin: "0px" }}
               >
                 <img
-                  class="card-img-top"
+                  className="card-img-top"
                   src={events}
                   alt=""
                   style={{ width: "330px" }}
