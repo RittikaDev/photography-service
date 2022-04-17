@@ -1,6 +1,7 @@
 import React from "react";
 import "./Haeder.css";
-import { Container, Form, Nav, Navbar, NavLink } from "react-bootstrap";
+import { Container, Form, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,37 +14,37 @@ const Header = () => {
         <Navbar.Collapse id="navbarScroll navbar">
           <Nav className="ms-auto my-1 my-lg-0" navbarScroll>
             <Form className="d-flex collapse">
-              <NavLink to="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 Home
-              </NavLink>
-              <NavLink className="nav-link" to="/recent">
+              </Link>
+              <Link className="nav-link" to="/recent">
                 Category
-              </NavLink>
-              <NavLink className="nav-link" to="/about">
+              </Link>
+              <Link className="nav-link" to="/about">
                 About
-              </NavLink>
+              </Link>
 
-              <NavLink className="nav-link" to="/login">
+              <Link className="nav-link" to="/signup">
                 Signup
-              </NavLink>
+              </Link>
             </Form>
           </Nav>
           {/* <Form className="d-flex collapse">
-            <NavLink className="nav-link search-box" to="">
+            <Link className="nav-link search-box" to="">
               <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-            </NavLink>
-            <NavLink className="nav-link facebook" to="">
+            </Link>
+            <Link className="nav-link facebook" to="">
               <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
-            </NavLink>
-            <NavLink className="nav-link twitter" to="">
+            </Link>
+            <Link className="nav-link twitter" to="">
               <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-            </NavLink>
-            <NavLink className="nav-link instagram" to="">
+            </Link>
+            <Link className="nav-link instagram" to="">
               <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-            </NavLink>
-            <NavLink className="nav-link dribble" to="">
+            </Link>
+            <Link className="nav-link dribble" to="">
               <FontAwesomeIcon icon={faDribbble}></FontAwesomeIcon>
-            </NavLink>
+            </Link>
           </Form> */}
         </Navbar.Collapse>
       </Container>

@@ -1,8 +1,11 @@
 import React from "react";
 import "./Checkout.css";
 import checkout from "../../Images/checkout.jpg";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
+  const notify = () => toast("Thank you for your booking !");
   return (
     <div class="mainscreen my-5">
       <div class="card">
@@ -60,7 +63,7 @@ const Checkout = () => {
                 required
               />
             </div>
-            <button type="submit" class="button">
+            <button type="submit" class="button" onClick={notify}>
               CheckOut
             </button>
           </form>
