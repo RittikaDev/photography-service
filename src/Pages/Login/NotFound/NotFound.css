@@ -1,0 +1,11 @@
+.notfound {
+  transition: all 0.3 ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+.notfound:hover {
+  filter: grayscale(1) brightness(1);
+  transition: all 0.3 ease;
+
+  transform: scale(1.1);
+}

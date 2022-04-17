@@ -2,8 +2,15 @@ import React from "react";
 import "./Haeder.css";
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const handleSignout = () => {
+    signOut(auth);
+  };
   return (
     <Navbar expand="lg" className="shadow" id="header" bg="dark" variant="dark">
       <Container fluid className="container">
@@ -14,7 +21,7 @@ const Header = () => {
         <Navbar.Collapse id="navbarScroll navbar">
           <Nav className="ms-auto my-1 my-lg-0" navbarScroll>
             <Form className="d-flex collapse">
-              <Link to="/" className="nav-link">
+              <Link to="/banner" className="nav-link">
                 Home
               </Link>
               <Link className="nav-link" to="/recent">
@@ -24,9 +31,15 @@ const Header = () => {
                 About
               </Link>
 
-              <Link className="nav-link" to="/signup">
-                Signup
-              </Link>
+              {user ? (
+                <Link className="nav-link" to="" onClick={handleSignout}>
+                  Signout
+                </Link>
+              ) : (
+                <Link className="nav-link" to="/login">
+                  Signup
+                </Link>
+              )}
             </Form>
           </Nav>
           {/* <Form className="d-flex collapse">
