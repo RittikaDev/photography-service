@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Works from "../Works/Works";
 import "./Services.css";
 
@@ -33,7 +34,12 @@ const Services = () => {
               <p className="text-center px-auto">{service.description}</p>
             </ul>
             <ul className="scis me-4 pe-2">
-              <button className="btn btn-primary ">Checkout</button>
+              <Link
+                className="btn btn-primary button"
+                to={"/services/" + service.id}
+              >
+                Checkout
+              </Link>
             </ul>
           </div>
         ))}

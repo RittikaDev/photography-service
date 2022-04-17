@@ -78,14 +78,14 @@
 }
 
 .container .card .sci p,
-.container .card .scis button {
+.container .card .scis .button {
   transform: translateY(40px);
   transition: 0.5s;
   opacity: 0;
 }
 
 .container .card:hover .sci p,
-.container .card:hover .scis button {
+.container .card:hover .scis .button {
   transform: translateY(0px);
   opacity: 1;
 }
