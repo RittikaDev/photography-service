@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="container">
-        <div className="container mx-5">
-          <div className="row ms-5 container">
+        <div className="container text-center">
+          <div className="row container">
             <div className="col-lg-4 footer-col">
               <h4>Tags</h4>
               <ul>

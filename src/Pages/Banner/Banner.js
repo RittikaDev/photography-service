@@ -31,10 +31,9 @@ const Banner = () => {
               <span style={{ color: "rgb(1, 87, 144, 1)" }}>|</span>{" "}
             </h3>
             <blockquote className="my-2 mx-auto text-center">
-              "Photography is a way of feeling, of touching, of loving. What you
-              have caught on film is captured forever ... It remembers little
-              things, long after you have forgotten everything."
-              <span>-Aaron Siskind</span>
+              “When words become unclear, I shall focus with photographs. When
+              images become inadequate, I shall be content with silence.”
+              <span>— Ansel Adams</span>
             </blockquote>
           </div>
 

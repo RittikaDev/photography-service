@@ -23,71 +23,71 @@ const Works = () => {
             </a>
           </div>
           <div className="">
-            <div className="portfolio-grid row row-cols-1 row-cols-md-3 px-4 mt-5 ms-5">
+            <div className="portfolio-grid row row-cols-1 row-cols-md-3 px-4 mt-5">
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={wedding}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={wildlife}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={nature}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={outdoor}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={birthday}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
               <div
                 className="card"
-                style={{ width: "330px", height: "250px", margin: "0px" }}
+                style={{ width: "350px", height: "250px", margin: "0px" }}
               >
                 <img
                   className="card-img-top"
                   src={events}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "350px" }}
                 />
               </div>
             </div>

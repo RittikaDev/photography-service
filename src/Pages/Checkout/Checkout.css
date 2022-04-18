@@ -22,7 +22,7 @@
 
 .product {
   object-fit: cover;
-  width: 27em;
+  width: 24em;
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
 }

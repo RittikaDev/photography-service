@@ -34,10 +34,7 @@ const Services = () => {
               <p className="text-center px-auto">{service.description}</p>
             </ul>
             <ul className="scis me-4 pe-2">
-              <Link
-                className="btn btn-primary button"
-                to={"/services/" + service.id}
-              >
+              <Link className="button btnb" to={"/services/" + service.id}>
                 Checkout
               </Link>
             </ul>

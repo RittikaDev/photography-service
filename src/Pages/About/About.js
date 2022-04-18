@@ -3,10 +3,10 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="my-3">
+    <div className="my-3 about">
       <div className="container mb-5">
         <div className="row">
-          <div className="col-lg-6 mt-3">
+          <div className="col-lg-6 col-sm-12 mt-3">
             <div className="mt-5 pt-5">
               <h1 className="text-left mt-5">Hi There! </h1>
               <p>
@@ -17,7 +17,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 col-sm-12">
             <section className="about_section">
               <div class="right"></div>
               <div class="left"></div>
