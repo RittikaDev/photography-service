@@ -38,7 +38,7 @@ const Login = () => {
       setUserInfo({ ...userInfo, email: e.target.value });
       setErrors({ ...errors, email: "" });
     } else {
-      setErrors({ ...errors, email: "Invalid email" });
+      setErrors({ ...errors, email: "Wrong email entered!" });
       setUserInfo({ ...userInfo, email: "" });
     }
     // setEmail(e.target.value);
@@ -50,7 +50,7 @@ const Login = () => {
       setUserInfo({ ...userInfo, password: e.target.value });
       setErrors({ ...errors, password: "" });
     } else {
-      setErrors({ ...errors, password: "Minimum 6 characters!" });
+      setErrors({ ...errors, password: "Typed a wrong password! Try again." });
       setUserInfo({ ...userInfo, password: "" });
     }
   };
@@ -76,14 +76,13 @@ const Login = () => {
     if (error) {
       switch (error?.code) {
         case "auth/invalid-email":
-          alert("Invalid email provided, please provide a valid email");
+          toast("Wrong email typed !");
           break;
-
         case "auth/invalid-password":
-          alert("Wrong password. Intruder!!");
+          toast("Wrong password, try again please!");
           break;
         default:
-          alert("something went wrong");
+          toast("Something went wrong");
       }
     }
   }, [hookError, googleError]);
@@ -95,7 +94,7 @@ const Login = () => {
     toast("Sent email");
   };
   return (
-    <div className="wrapper">
+    <div className="wrapper my-3">
       <h3>Please Login</h3>
       <form
         onSubmit={handleLogin}
@@ -107,26 +106,39 @@ const Login = () => {
           className="feedback-input"
           placeholder="Name"
         />
-        {userInfo?.name && <p>{userInfo.name}</p>}
+        {/* {userInfo?.name && <p>{userInfo.name}</p>} */}
         <input
           name="email"
           ref={emailRef}
           type="text"
           className="feedback-input"
           placeholder="Email"
-          onBlur={handleEmailChange}
+          onChange={handleEmailChange}
         />
-        {errors?.email && <p className="text-danger">{errors.email}</p>}
+        {errors?.email && (
+          <p
+            className="text-danger"
+            style={{ fontSize: "12px", fontWeight: "bolder" }}
+          >
+            {errors.email}
+          </p>
+        )}
         <input
           name="password"
           type="password"
           className="feedback-input"
           placeholder="Password"
-          onBlur={handlePasswordChange}
+          onChange={handlePasswordChange}
         />
-        {errors?.password && <p className="text-danger">{errors.password}</p>}
-
-        <input type="submit" value="Register" className="btn" />
+        {errors?.password && (
+          <p
+            className="text-danger"
+            style={{ fontSize: "12px", fontWeight: "bolder" }}
+          >
+            {errors.password}
+          </p>
+        )}
+        <input type="submit" value="Register" className="button" />
         <div className="d-flex align-items-center justify-content-center">
           <div style={{ height: "1.5px" }} className="bg-danger w-25"></div>
           <h3 className="mt-2 px-2">or</h3>
@@ -136,17 +148,17 @@ const Login = () => {
           <FontAwesomeIcon icon={faGoogle} className="icon"></FontAwesomeIcon>
         </div>
         <p>
-          Already have an account?
-          <Link to="/signup">Login</Link>
+          Don't have an account?
+          <Link to="/signup" className="btn">
+            {" "}
+            Signup Here
+          </Link>
         </p>
         <p>
           Fogot Password?{" "}
-          <Button
-            className="text-primary pe-auto text-decoration-none"
-            onClick={resetPassword}
-          >
+          <button className="btn" onClick={resetPassword}>
             Reset Password
-          </Button>{" "}
+          </button>{" "}
         </p>
       </form>
     </div>

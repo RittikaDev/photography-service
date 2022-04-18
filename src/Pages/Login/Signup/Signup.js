@@ -81,8 +81,8 @@ const Signup = () => {
 
   console.log(userInfo);
   return (
-    <div className="wrapper">
-      <h3>Please Sign Up</h3>
+    <div className="wrapper my-3">
+      <h3 className="text-center">Please Sign Up</h3>
       <form
         onSubmit={handleRegister}
         className="container card-signup d-block form"
@@ -93,7 +93,7 @@ const Signup = () => {
           className="feedback-input"
           placeholder="Name"
         />
-        {userInfo?.name && <p>{userInfo.name}</p>}
+        {/* {userInfo?.name && <p>{userInfo.name}</p>} */}
         <input
           name="email"
           type="text"
@@ -101,7 +101,14 @@ const Signup = () => {
           placeholder="Email"
           onBlur={handleEmailChange}
         />
-        {errors?.email && <p className="text-danger">{errors.email}</p>}
+        {errors?.email && (
+          <p
+            className="text-danger"
+            style={{ fontSize: "12px", fontWeight: "bolder" }}
+          >
+            {errors.email}
+          </p>
+        )}
         <input
           name="password"
           type="password"
@@ -109,7 +116,14 @@ const Signup = () => {
           placeholder="Password"
           onBlur={handlePasswordChange}
         />
-        {errors?.password && <p className="text-danger">{errors.password}</p>}
+        {errors?.password && (
+          <p
+            className="text-danger"
+            style={{ fontSize: "12px", fontWeight: "bolder" }}
+          >
+            {errors.password}
+          </p>
+        )}
         <input
           name="confrimPassword"
           type="password"
@@ -118,7 +132,7 @@ const Signup = () => {
           onBlur={handleConfirmPasswordChange}
         />
 
-        <input type="submit" value="Register" className="btn" />
+        <input type="submit" value="Register" className="button" />
         <div className="d-flex align-items-center justify-content-center">
           <div style={{ height: "1.5px" }} className="bg-danger w-25"></div>
           <h3 className="mt-2 px-2">or</h3>
@@ -133,7 +147,10 @@ const Signup = () => {
         </div>
         <p>
           Already have an account?
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="btn">
+            {" "}
+            Login
+          </Link>
         </p>
       </form>
     </div>

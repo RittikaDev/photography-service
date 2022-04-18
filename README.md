@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# Independent Service Provider - **_Frame It_**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check it out here :- [Frame It](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Concepts Behind This Project
 
-In the project directory, you can run:
+This is an independent photographer's service providing website. A quick overview of this website is listed down below:-
+
+- The Home Page consists of - Navbar - A static banner - Services provided by the photographer himself. - A preview of some of his work on - A Footer
 
 ### `npm start`
 
