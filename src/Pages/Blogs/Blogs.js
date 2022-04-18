@@ -20,9 +20,13 @@ const Blogs = () => {
                 </h5>
 
                 <p>
-                  The position property specifies the type of positioning method
-                  used for an element (static, relative, absolute, fixed, or
-                  sticky).
+                  Authentication is the process of verifying a user where a user
+                  provides username,password,email address. And this information
+                  is changeable by the user. Whereas, authorization defines
+                  which resources or files or any such thing is accessible by
+                  the user. And this is usually determined by an organization
+                  and a user does not see this entire process that is happening
+                  behind the scene.
                 </p>
               </div>
             </div>
@@ -43,9 +47,12 @@ const Blogs = () => {
                   implement authentication?
                 </h5>
                 <p>
-                  The position property specifies the type of positioning method
-                  used for an element (static, relative, absolute, fixed, or
-                  sticky).
+                  Firebase provides one of the easiest authentication method
+                  without going through the manual authentication building
+                  system. It gives a much flexible backend service. Besides
+                  email password it also helps to authenticate with social
+                  accounts. Otheroptions for authentication are:- Auth0, Google
+                  ID token authentication, Service accounts
                 </p>
               </div>
             </div>
@@ -67,9 +74,9 @@ const Blogs = () => {
                 </h5>
 
                 <p>
-                  The position property specifies the type of positioning method
-                  used for an element (static, relative, absolute, fixed, or
-                  sticky).
+                  Other Firebase services includes:- Hosting, Cloud Storage,
+                  Google Analytics,Cloud Firestore, Cloud Functions, Cloud
+                  Messaging,
                 </p>
               </div>
             </div>
