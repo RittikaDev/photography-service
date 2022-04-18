@@ -22,7 +22,7 @@ The Signup and Login form is done with the help of **_Firebase Authentication_**
 
 Three questions were answered as per the requirements in the BLog page. The
 
-Technologies used:-
+## Technologies used:-
 
 - React Routing
 - React Firebase Hooking
