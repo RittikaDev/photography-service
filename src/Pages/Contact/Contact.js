@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const Contact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
-		console.log(e.target);
-
-		// emailjs
-		// 	.sendForm(
-		// 		"service_4zgcava",
-		// 		"template_fpu5rnt",
-		// 		e.target,
-		// 		"bxY2HNrT9lXszTIDK"
-		// 	)
-		// 	.then((res) => {
-		// 		console.log(res);
-		// 	})
-		// 	.catch((err) => console.log(err));
+		emailjs
+			.sendForm(
+				"service_4zgcava",
+				"template_fpu5rnt",
+				e.target,
+				"bxY2HNrT9lXszTIDK"
+			)
+			.then((res) => {
+				toast.success("Message Has Been Sent");
+			})
+			.catch((err) => console.log(err));
 	};
 	return (
 		<div className="container contactSection">
@@ -41,9 +40,6 @@ const Contact = () => {
 							<p>text</p>
 						</div>
 					</div>
-					{/* <ContactInfoItem icon={<MdLocalPhone />} text="+8801231" />
-					<ContactInfoItem icon={<MdEmail />} text="webcifar@gmail.com" />
-					<ContactInfoItem text="Chittagong, Bangladesh" /> */}
 				</div>
 				<div className="right">
 					<form onSubmit={sendEmail} className="wrapper-contact my-3">
@@ -66,6 +62,7 @@ const Contact = () => {
 							</label>
 						</div>
 						<button type="submit">Send</button>
+						<button class="buttonn">Click Me</button>
 					</form>
 				</div>
 			</div>
