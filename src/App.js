@@ -13,30 +13,32 @@ import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
 import About from "./Pages/About/About";
 import NotFound from "./Pages/Login/NotFound/NotFound";
 import Blogs from "./Pages/Blogs/Blogs";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <Routes>
-        <Route path="/" element={<Banner></Banner>}></Route>
-        <Route path="/banner" element={<Banner></Banner>}></Route>
+        <Route path="/" element={<Banner />}></Route>
+        <Route path="/banner" element={<Banner />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route
           path="/services/:id"
           element={
             <RequireAuth>
-              <Checkout></Checkout>
+              <Checkout />
             </RequireAuth>
           }
         ></Route>
-        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="/blogs" element={<Blogs />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
 
-      <Footer></Footer>
+      <Footer />
       <ToastContainer
         position="top-center"
         autoClose={7000}

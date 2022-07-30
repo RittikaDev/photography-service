@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Checkout.css";
 import checkout from "../../Images/checkout.jpg";
 import { toast } from "react-toastify";
@@ -7,6 +7,15 @@ import { useForm } from "react-hook-form";
 
 const Checkout = () => {
   const { register, handleSubmit } = useForm();
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+      });
+  }, []);
+  console.log(services);
   const onSubmit = (data) => {
     console.log(data);
     toast.success("Successfully Registered");

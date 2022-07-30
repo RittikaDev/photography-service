@@ -30,7 +30,24 @@ const Header = () => {
               <CustomLink className="nav-link" to="/about">
                 About
               </CustomLink>
+              <a
+                className="nav-link"
+                style={{ fontSize: "16px" }}
+                href="banner#gallery"
+              >
+                Gallery
+              </a>
 
+              <a
+                className="nav-link"
+                style={{ fontSize: "16px" }}
+                href="banner#top-work"
+              >
+                Top Work
+              </a>
+              <CustomLink className="nav-link" to="/contact">
+                Contact
+              </CustomLink>
               {user ? (
                 <CustomLink className="nav-link" to="" onClick={handleSignout}>
                   Signout

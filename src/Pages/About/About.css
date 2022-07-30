@@ -18,7 +18,7 @@
 .about_section .right {
   width: 100%;
   height: 330px;
-  background: url("../../Images/about.jpg") no-repeat center / cover;
+  background: url("../../Images/about.png") no-repeat center / cover;
   display: flex;
   border-radius: 8px;
   border: 1px solid #eaeaea;
