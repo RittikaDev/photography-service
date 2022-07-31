@@ -10,6 +10,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Services from "../Services/Services";
 import Gallery from "../Gallery/Gallery";
+import Works from "../Works/Works";
+import Countdown from "../Countdown/Countdown";
+import WorkProgress from "../WorkProgress/WorkProgress";
 
 const Banner = () => {
 	return (
@@ -60,7 +63,10 @@ const Banner = () => {
 				</div>
 			</header>
 			<Gallery />
-			<Services></Services>
+			<Services />
+			<Works />
+			<Countdown />
+			<WorkProgress />
 		</>
 	);
 };
