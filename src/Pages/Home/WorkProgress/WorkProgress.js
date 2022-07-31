@@ -4,36 +4,20 @@ import WorkProgressBoiler from "../WokProgressBoiler/WorkProgressBoiler";
 import "./WorkProgress.css";
 
 function WorkProgress() {
-	const [ref, inView] = useInView();
-	const [animation, setAnimation] = useState(false);
-	useEffect(() => {
-		if (inView) {
-			setAnimation(true);
-		}
-	}, [inView]);
-	return (
-		<div className="container work-progress">
-			<div className="card">
-				<div className="percent" ref={ref}>
-					{animation && <div className="dot"></div>}
-					<svg>
-						<circle cx="70" cy="70" r="70" />
-						<circle cx="70" cy="70" r="70" />
-					</svg>
-				</div>
-			</div>
-			<div className="card">
-				<div className="percent">
-					{animation && <div className="dot"></div>}
-					<svg>
-						<circle cx="70" cy="70" r="70" />
-						<circle cx="70" cy="70" r="70" />
-					</svg>
-				</div>
-			</div>
-			<WorkProgressBoiler className="dot1" />
-		</div>
-	);
+  const [ref, inView] = useInView();
+  const [animation, setAnimation] = useState(false);
+  useEffect(() => {
+    if (inView) {
+      setAnimation(true);
+    }
+  }, [inView]);
+  return (
+    <div className="container work-progress">
+      <WorkProgressBoiler className="card1" heading="Wedding" text="79%" />
+      <WorkProgressBoiler className="card2" heading="Outdoor" text="67%" />
+      <WorkProgressBoiler className="card3" heading="Events" text="75%" />
+    </div>
+  );
 }
 
 export default WorkProgress;

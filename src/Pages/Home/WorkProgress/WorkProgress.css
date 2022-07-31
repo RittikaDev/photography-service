@@ -1,67 +1,171 @@
+:root {
+  --green-card: #04fc43;
+  --blue-card1: #096fe4;
+  --orange-card2: #fa5c0d;
+  --yellow-card3: #f9f611;
+}
 .work-progress {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .work-progress .card {
-	position: relative;
-	width: 220px;
-	height: 250px;
-	background: #2a2a2a;
+  position: relative;
+  width: 220px;
+  height: 250px;
+  background: #2a2a2a;
 }
 .work-progress .card .percent {
-	position: relative;
-	width: 150px;
-	height: 150px;
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
 .work-progress .card .percent svg {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	transform: rotate(270deg);
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
 }
 .work-progress .card .percent svg circle {
-	width: 100%;
-	height: 100%;
-	fill: transparent;
-	stroke-width: 2;
-	stroke: #191919;
-	transform: translate(5px, 5px);
-	background: #04fc43;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 2;
+  stroke: #191919;
+  transform: translate(5px, 5px);
+  background: var(--green-card);
 }
+.work-progress .card1 .percent svg circle {
+  background: var(--blue-card1);
+}
+.work-progress .card2 .percent svg circle {
+  background: var(--orange-card2);
+}
+.work-progress .card3 .percent svg circle {
+  background: var(--yellow-card3);
+}
+
 .work-progress .card .percent svg circle:nth-child(2) {
-	stroke: #04fc43;
-	stroke-dasharray: 440;
-	stroke-dashoffset: calc(440 - (440 * 85) / 100);
+  stroke: var(--green-card);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+  animation: fadeIn 1s linear;
+  animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.work-progress .card1 .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 79) / 100);
+  stroke: var(--blue-card1);
+}
+.work-progress .card2 .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 67) / 100);
+
+  stroke: var(--orange-card2);
+}
+.work-progress .card3 .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 75) / 100);
+  stroke: var(--yellow-card3);
 }
 .dot {
-	position: absolute;
-	inset: 5px;
-	z-index: 10;
-	/* transform: rotate(calc(3.6deg * 85)); */
-	animation: animateDot 2s linear forwards;
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  animation: animateDot 2s linear forwards;
+}
+.card1 .dot {
+  animation: animateDot1 2s linear forwards;
+}
+.card2 .dot {
+  animation: animateDot2 2s linear forwards;
+}
+.card3 .dot {
+  animation: animateDot3 2s linear forwards;
 }
 @keyframes animateDot {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(calc(3.6deg * 85));
-	}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * 85));
+  }
+}
+@keyframes animateDot1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * 79));
+  }
+}
+@keyframes animateDot2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * 67));
+  }
+}
+@keyframes animateDot3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * 75));
+  }
 }
 
 .dot::before {
-	content: "";
-	position: absolute;
-	top: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #04fc43;
-	box-shadow: 0 0 10px #04fc43, 0 0 30px #04fc43;
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green-card);
+  box-shadow: 0 0 10px var(--green-card), 0 0 30px var(--green-card);
+}
+.card1 .dot::before {
+  background: var(--blue-card1);
+  box-shadow: 0 0 10px var(--blue-card1), 0 0 30px var(--blue-card1);
+}
+.card2 .dot::before {
+  background: var(--orange-card2);
+  box-shadow: 0 0 10px var(--orange-card2), 0 0 30px var(--orange-card2);
+}
+.card3 .dot::before {
+  background: var(--yellow-card3);
+  box-shadow: 0 0 10px var(--yellow-card3), 0 0 30px var(--yellow-card3);
+}
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.number h2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: -5px;
+}
+.number p {
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.75em;
 }
