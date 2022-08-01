@@ -7,6 +7,9 @@
 	border-radius: 8px;
 	margin-bottom: 2rem;
 }
+.itemstyle p {
+	color: #bcb4b4;
+}
 .icon {
 	color: white;
 	background-color: #363636;
@@ -30,7 +33,7 @@
 	height: 50%;
 	background-color: #bcb4b4;
 	left: 45%;
-	top: 30%;
+	top: 40%;
 	transform: translate(-50%, -50%);
 }
 .contactSection__wrapper .left {
@@ -83,31 +86,31 @@
 	min-height: 200px;
 	resize: vertical;
 }
-.wrapper-contact button[type="submit"] {
+/* .wrapper-contact button[type="submit"] {
 	background-color: #bcb4b4;
 	color: black;
-	/* font-size: 2rem; */
 	display: inline-block;
 	outline: none;
 	border: none;
 	padding: 1rem 4rem;
 	border-radius: 8px;
 	cursor: pointer;
-}
+} */
 
 /* Button */
 .buttonn {
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 16px;
 	letter-spacing: 4px;
 	position: relative;
-	background-color: #16a085;
+	/* background-color: #16a085; */
+	background-color: #bcb4b4;
 	border: none;
 	color: #fff;
-	padding: 20px;
-	width: 200px;
+	padding: 10px;
+	width: 150px;
 	text-align: center;
 	transition-duration: 0.4s;
 	overflow: hidden;
@@ -117,13 +120,13 @@
 
 .buttonn:hover {
 	background: #fff;
-	box-shadow: 0px 2px 10px 5px #1abc9c;
+	box-shadow: 0px 2px 10px 5px #bcb4b4;
 	color: #000;
 }
 
 .buttonn:after {
 	content: "";
-	background: #1abc9c;
+	background: #bcb4b4;
 	display: block;
 	position: absolute;
 	padding-top: 300%;

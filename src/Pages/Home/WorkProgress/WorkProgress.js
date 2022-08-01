@@ -1,23 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import WorkProgressBoiler from "../WokProgressBoiler/WorkProgressBoiler";
 import "./WorkProgress.css";
 
 function WorkProgress() {
-  const [ref, inView] = useInView();
-  const [animation, setAnimation] = useState(false);
-  useEffect(() => {
-    if (inView) {
-      setAnimation(true);
-    }
-  }, [inView]);
-  return (
-    <div className="container work-progress">
-      <WorkProgressBoiler className="card1" heading="Wedding" text="79%" />
-      <WorkProgressBoiler className="card2" heading="Outdoor" text="67%" />
-      <WorkProgressBoiler className="card3" heading="Events" text="75%" />
-    </div>
-  );
+	return (
+		<>
+			<div className="container work-progress">
+				<WorkProgressBoiler
+					className="card1 card-down"
+					heading="Wedding"
+					text="79%"
+				/>
+				<WorkProgressBoiler className="card" heading="Nature" text="73%" />
+				<WorkProgressBoiler
+					className="card2 card-down"
+					heading="Outdoor"
+					text="67%"
+				/>
+			</div>
+			<div className="container work-progress ">
+				<WorkProgressBoiler className="card3" heading="Events" text="75%" />
+			</div>
+		</>
+	);
 }
 
 export default WorkProgress;

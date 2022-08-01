@@ -2,6 +2,9 @@ import React from "react";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
 	const sendEmail = (e) => {
@@ -23,21 +26,27 @@ const Contact = () => {
 			<div className="contactSection__wrapper">
 				<div className="left my-5">
 					<div className="itemstyle">
-						<div className="icon">icon</div>
+						<div className="icon">
+							<FontAwesomeIcon icon={faEnvelope} />
+						</div>
 						<div className="info">
-							<p>text</p>
+							<p>jamie@gmail.com</p>
 						</div>
 					</div>
 					<div className="itemstyle">
-						<div className="icon">icon</div>
+						<div className="icon">
+							<FontAwesomeIcon icon={faPhoneVolume} />
+						</div>
 						<div className="info">
-							<p>text</p>
+							<p>09345271835</p>
 						</div>
 					</div>
 					<div className="itemstyle">
-						<div className="icon">icon</div>
+						<div className="icon">
+							<FontAwesomeIcon icon={faInstagram} />
+						</div>
 						<div className="info">
-							<p>text</p>
+							<p>Jamie.Keery</p>
 						</div>
 					</div>
 				</div>
@@ -61,8 +70,10 @@ const Contact = () => {
 								<textarea type="text" id="message" name="message" />
 							</label>
 						</div>
-						<button type="submit">Send</button>
-						<button className="buttonn">Click Me</button>
+						{/* <button type="submit">Send</button> */}
+						<button className="buttonn mb-5" type="submit">
+							Send
+						</button>
 					</form>
 				</div>
 			</div>

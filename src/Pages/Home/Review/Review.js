@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./Review.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Review({ text, ...rest }) {
+function Review({ text, icon, ...rest }) {
 	const [viewPortEntered, setViewPortEntered] = useState(false);
 
 	return (
@@ -20,7 +21,7 @@ function Review({ text, ...rest }) {
 						delayedCall
 					>
 						<div className="review-container">
-							<i className="fas fa-utensils"></i>
+							<FontAwesomeIcon className="link i" icon={icon}></FontAwesomeIcon>
 							<span className="num" ref={countUpRef}></span>
 							<span className="text">{text}</span>
 						</div>
