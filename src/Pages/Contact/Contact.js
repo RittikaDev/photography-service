@@ -53,19 +53,19 @@ const Contact = () => {
 				<div className="right">
 					<form onSubmit={sendEmail} className="wrapper-contact my-3">
 						<div className="form-group">
-							<label htmlFor="name">
+							<label htmlhtmlFor="name">
 								Your Name
 								<input type="text" id="name" name="name" />
 							</label>
 						</div>
 						<div className="form-group">
-							<label htmlFor="email">
+							<label htmlhtmlFor="email">
 								Your Email
 								<input type="email" id="email" name="email" />
 							</label>
 						</div>
 						<div className="form-group">
-							<label htmlFor="message">
+							<label htmlhtmlFor="message">
 								Your message
 								<textarea type="text" id="message" name="message" />
 							</label>

@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from "react-bootstrap";
 import Slider from "../Slider/Slider";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
@@ -20,30 +20,27 @@ const Footer = () => {
 					<div className="container text-center">
 						<div className="row container">
 							<div className="col-lg-4 footer-col">
-								<h4>Tags</h4>
+								<h4>View More</h4>
 								<ul>
 									<li>
-										<NavLink to="/recent">Nature</NavLink>
+										<Link to="/recent">Nature</Link>
 									</li>
 									<li>
-										<NavLink to="/recent">Life</NavLink>
+										<Link to="/recent">Life</Link>
 									</li>
 									<li>
-										<NavLink to="/recent">Street</NavLink>
+										<Link to="/recent">Street</Link>
 									</li>
 								</ul>
 							</div>
 							<div className=" col-lg-4 footer-col">
-								<h4>FAQ</h4>
+								<h4>Quick Access</h4>
 								<ul>
 									<li>
-										<NavLink to="/login">Login</NavLink>
+										<Link to="/login">Login</Link>
 									</li>
 									<li>
-										<NavLink to="/login">Signup</NavLink>
-									</li>
-									<li>
-										<NavLink>About Me</NavLink>
+										<Link to="/about">About </Link>
 									</li>
 								</ul>
 							</div>

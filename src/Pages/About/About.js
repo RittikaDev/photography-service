@@ -1,42 +1,27 @@
 import React from "react";
 import "./About.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 import AboutIcon from "./AboutIcon";
 import AboutIconRight from "./AboutIconRight";
 
 const About = () => {
 	return (
-		// <div className="my-3 about">
-		// 	<div className="container mb-5">
-		// 		<div className="row">
-		// 			<div className="col-lg-6 col-sm-12 mt-3">
-		// 				<div className="mt-5 pt-5">
-		// 					<h1 className="text-left mt-5">Hi There! </h1>
-		// 					<p>
-		// 						I am a keen individual with a deep seeded passion for web
-		// 						development. I enjoy the creativity and hard work that goes
-		// 						behind this process. And love it when I actually end up
-		// 						developing something on my own. Looking forward to learn more.
-		// 					</p>
-		// 				</div>
-		// 			</div>
-		// 			<div className="col-lg-6 col-sm-12">
-		// 				<section className="about_section">
-		// 					<div className="right"></div>
-		// 					<div className="left"></div>
-		// 				</section>
-		// 			</div>
-		// 		</div>
-		// 	</div>
-		// </div>
 		<>
 			<div className="section-full container my-5">
 				<div className="row justify-content-center d-flex">
 					<div className="col-lg-4">
-						<AboutIcon />
-						<AboutIcon />
-						<AboutIcon />
+						<AboutIcon
+							heading="Years Of Experience"
+							text="Been experimenting with camera for years, gathering not just skills
+					but memories too!"
+						/>
+						<AboutIcon
+							heading="Best Image Quaility"
+							text="Working with the latest technologies helps to provide the best quality!"
+						/>
+						<AboutIcon
+							heading="Visible Difference"
+							text="Pick me to see an actual impact!"
+						/>
 					</div>
 					<div className="col-lg-4 pb-5 mb-5 ">
 						<div className="middle">
@@ -49,9 +34,18 @@ const About = () => {
 						</div>
 					</div>
 					<div className="col-lg-4">
-						<AboutIconRight />
-						<AboutIconRight />
-						<AboutIconRight />
+						<AboutIconRight
+							heading="Affordable Price"
+							text="Providing excillent work keeping the budget in mind!"
+						/>
+						<AboutIconRight
+							heading="Editing Service"
+							text="No need to rush to editors as I will be covering that too!"
+						/>
+						<AboutIconRight
+							heading="Pay As You Go"
+							text="Pay only for what you need, no extra charge required!"
+						/>
 					</div>
 				</div>
 			</div>
@@ -62,8 +56,8 @@ const About = () => {
 							May Your Experience Be The Best You Ever Had
 						</div>
 						<div className="col-lg-9 about-me px-5 pt-4">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-							Adipisci, atque!
+							Make me a part of your next memory, and I will make sure to frame
+							it for you to cherish those moments forever!
 						</div>
 					</div>
 					<div className="scrolling-image-container">
