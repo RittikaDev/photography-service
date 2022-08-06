@@ -1,0 +1,10 @@
+.table-cart {
+	margin-top: 11rem !important;
+}
+.table-cart td {
+	text-align: center;
+}
+.table-cart td img {
+	width: 30%;
+	height: 10vh;
+}

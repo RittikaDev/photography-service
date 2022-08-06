@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Haeder.css";
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -7,16 +7,33 @@ import { signOut } from "firebase/auth";
 import CustomLink from "../../CustomLink/CustomLink";
 import logo from "../../../Images/logo5.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { Context } from "../../../App";
+
 const Header = () => {
+	const { cartItems } = useContext(Context);
+
 	const [user] = useAuthState(auth);
 	const handleSignout = () => {
 		signOut(auth);
 	};
+
 	return (
-		<Navbar expand="lg" className="shadow" id="header" bg="dark" variant="dark">
-			<Container fluid className="container">
+		<Navbar
+			expand="lg"
+			className="shadow fixed-top"
+			id="header"
+			bg="dark"
+			variant="dark"
+		>
+			<Container
+				fluid
+				className="container"
+				style={{ paddingTop: "0px", paddingBottom: "0px" }}
+			>
 				<Navbar.Brand to="" className="nav-brand text-light">
-					<img src={logo} alt="" style={{ height: "70px" }} />
+					<img src={logo} alt="" style={{ height: "50px" }} />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" className="text-light" />
 				<Navbar.Collapse id="navbarScroll navbar">
@@ -47,7 +64,9 @@ const Header = () => {
 							>
 								Customer Review
 							</a>
+
 							{/* Home Page subsection */}
+
 							<CustomLink className="nav-link" to="/blogs">
 								Blogs
 							</CustomLink>
@@ -66,6 +85,27 @@ const Header = () => {
 									Signup
 								</CustomLink>
 							)}
+							<CustomLink
+								className="nav-link"
+								to="/cart"
+								style={{ margin: "6px 6px" }}
+							>
+								<FontAwesomeIcon
+									icon={faCartShopping}
+									style={{
+										fontSize: "15px",
+									}}
+								/>
+								<span
+									style={{
+										verticalAlign: "super",
+										fontSize: "13px",
+										marginLeft: "2px",
+									}}
+								>
+									{cartItems}
+								</span>
+							</CustomLink>
 						</Form>
 					</Nav>
 					{/* <Form className="d-flex collapse">

@@ -1,3 +1,4 @@
+import React, { createContext, useEffect, useRef, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer } from "react-toastify";
@@ -12,10 +13,55 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Contact from "./Pages/Contact/Contact";
 import Banner from "./Pages/Home/Banner/Banner";
 import Wrapper from "./Pages/Login/Login/Wrapper";
+import Cart from "./Pages/Cart/Cart";
 
+export const Context = createContext([]);
 function App() {
+	const [productlist, setProductlist] = useState([]);
+	const [changeIconID, setChangeIconID] = useState([]);
+	const [selectedArray, setSelectedArray] = useState([]);
+	const [selectedProductList, setSelectedProductList] = useState([]);
+	const [cartItems, setCartItems] = useState(0);
+
+	useEffect(() => {
+		fetch("data.json")
+			.then((res) => res.json())
+			.then((data) => {
+				setProductlist(data);
+			});
+	}, []);
+
+	const addToCart = (id) => {
+		const newIcons = [...changeIconID, id];
+		setChangeIconID(newIcons);
+		let selected = productlist.find((service) => service.id === id);
+		selected.icon = "true";
+		let selectedArr = [...selectedArray, selected];
+		setSelectedArray(selectedArr);
+		let selectedList = [...selectedProductList];
+		const exists = selectedList.find((item) => item.id === id);
+		console.log(exists);
+		if (!exists) {
+			selectedList = [...selectedProductList, selected];
+		} else {
+			selectedList = [...selectedProductList];
+		}
+
+		setSelectedProductList(selectedList);
+		setCartItems(selectedList.length);
+	};
+	console.log(selectedProductList);
+	console.log(cartItems);
 	return (
-		<>
+		<Context.Provider
+			value={{
+				productlist,
+				addToCart,
+				changeIconID,
+				cartItems,
+				selectedProductList,
+			}}
+		>
 			<Header />
 			<Routes>
 				<Route path="/" element={<Banner />}></Route>
@@ -32,6 +78,7 @@ function App() {
 				<Route path="/blogs" element={<Blogs />}></Route>
 				<Route path="/login" element={<Wrapper />}></Route>
 				<Route path="/contact" element={<Contact />}></Route>
+				<Route path="/cart" element={<Cart />}></Route>
 				<Route path="*" element={<NotFound />}></Route>
 			</Routes>
 
@@ -48,7 +95,7 @@ function App() {
 				pauseOnHover
 				theme="dark"
 			/>
-		</>
+		</Context.Provider>
 	);
 }
 

@@ -4,7 +4,7 @@
 		"name": "Wedding",
 		"description": "As I work alone I preferably do not cover the entire event, just for an hour or so.",
 		"image": "https://images.unsplash.com/photo-1558929992-f57215da003e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
-		"price": "$450",
+		"price": "450",
 		"icon": "false"
 	},
 	{
@@ -12,7 +12,7 @@
 		"name": "OutDoor",
 		"description": "Outdoor events are a great way to bind with nature.",
 		"image": "https://images.unsplash.com/photo-1541696456191-068acf3414c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
-		"price": "$355",
+		"price": "355",
 		"icon": "false"
 	},
 	{
@@ -20,7 +20,7 @@
 		"name": "Monochrome",
 		"description": "This is a new added service I started provided.",
 		"image": "https://images.unsplash.com/photo-1615048234103-2a149bb17ae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
-		"price": "$245",
+		"price": "245",
 		"icon": "false"
 	},
 	{
@@ -28,7 +28,7 @@
 		"name": "Nature",
 		"description": "Nature is one of my favourite pick, not bragging!",
 		"image": "https://images.unsplash.com/photo-1503435824048-a799a3a84bf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-		"price": "$328",
+		"price": "328",
 		"icon": "false"
 	},
 	{
@@ -36,7 +36,7 @@
 		"name": "Events",
 		"description": "For birthdays and any sorts of official gatherings.",
 		"image": "https://images.unsplash.com/photo-1534014003122-b516fbde05d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-		"price": "$320",
+		"price": "320",
 		"icon": "false"
 	},
 	{
@@ -44,7 +44,7 @@
 		"name": "Close to wildlife",
 		"description": "If you are an animal lover this is the service you want",
 		"image": "https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-		"price": "$450",
+		"price": "450",
 		"icon": "false"
 	}
 ]
