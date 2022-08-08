@@ -19,6 +19,7 @@ export const Context = createContext([]);
 function App() {
 	const [productlist, setProductlist] = useState([]);
 	const [changeIconID, setChangeIconID] = useState([]);
+	const [colorIconID, setColorIconID] = useState([]);
 	const [selectedArray, setSelectedArray] = useState([]);
 	const [selectedProductList, setSelectedProductList] = useState([]);
 	const [cartItems, setCartItems] = useState(0);
@@ -33,7 +34,9 @@ function App() {
 
 	const addToCart = (id) => {
 		const newIcons = [...changeIconID, id];
+		const colorIcons = [...colorIconID, id];
 		setChangeIconID(newIcons);
+		setColorIconID(colorIcons);
 		let selected = productlist.find((service) => service.id === id);
 		selected.icon = "true";
 		let selectedArr = [...selectedArray, selected];
@@ -55,6 +58,7 @@ function App() {
 				productlist,
 				addToCart,
 				changeIconID,
+				colorIconID,
 				cartItems,
 				selectedProductList,
 			}}

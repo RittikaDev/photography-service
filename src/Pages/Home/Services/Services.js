@@ -1,11 +1,16 @@
 import React, { useContext } from "react";
 import "./Services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
+import {
+	faCartPlus,
+	faCheck,
+	faHeart,
+} from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../../App";
 
 const Services = () => {
-	const { productlist, addToCart, changeIconID } = useContext(Context);
+	const { productlist, addToCart, changeIconID, colorIconID } =
+		useContext(Context);
 
 	return (
 		<div className="container body">
@@ -31,10 +36,31 @@ const Services = () => {
 								}}
 							>
 								{changeIconID.includes(service.id) ? (
-									<FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+									<FontAwesomeIcon
+										icon={faCheck}
+										className="service-icon"
+									></FontAwesomeIcon>
 								) : (
-									<FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon>
+									<FontAwesomeIcon
+										icon={faCartPlus}
+										className="service-icon"
+									></FontAwesomeIcon>
 								)}
+							</span>
+						</div>
+						<div className="text-center mx-auto ms-1">
+							<span
+								onClick={() => {
+									addToCart(service.id);
+								}}
+							>
+								<FontAwesomeIcon
+									className="service-icon"
+									icon={faHeart}
+									style={{
+										color: colorIconID.includes(service.id) ? "red" : "",
+									}}
+								></FontAwesomeIcon>
 							</span>
 						</div>
 					</ul>
