@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Review({ text, icon, ...rest }) {
+const Review = ({ text, icon, ...rest }) => {
 	const [viewPortEntered, setViewPortEntered] = useState(false);
 
 	return (
@@ -30,6 +30,6 @@ function Review({ text, icon, ...rest }) {
 			}}
 		</CountUp>
 	);
-}
+};
 
 export default Review;

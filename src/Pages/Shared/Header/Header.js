@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Haeder.css";
 import { Container, Form, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -11,10 +11,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../../App";
 
-const Header = () => {
-	const { cartItems } = useContext(Context);
+import { HashLink } from "react-router-hash-link";
 
+const Header = (ref) => {
+	const { cartItems } = useContext(Context);
 	const [user] = useAuthState(auth);
+
+	useEffect(() => {}, [ref]);
 	const handleSignout = () => {
 		signOut(auth);
 	};
@@ -42,31 +45,40 @@ const Header = () => {
 							<CustomLink to="/banner" className="nav-link">
 								Home
 							</CustomLink>
+
 							{/* Home Page subsection */}
-							<a
+							<HashLink
 								className="nav-link"
 								style={{ fontSize: "15px" }}
-								href="banner#gallery"
+								to="/banner#gallery"
+								smooth={true}
+								duration={500}
+								exact="true"
 							>
 								Gallery
-							</a>
-							<a
+							</HashLink>
+							<HashLink
 								className="nav-link"
 								style={{ fontSize: "15px" }}
-								href="banner#top-work"
+								to="/banner#top-work"
+								smooth={true}
+								duration={500}
+								exact="true"
 							>
 								Top Work
-							</a>
-							<a
+							</HashLink>
+
+							<HashLink
 								className="nav-link"
 								style={{ fontSize: "15px" }}
-								href="banner#review"
+								to="/banner#review"
+								smooth={true}
+								duration={500}
+								exact="true"
 							>
 								Customer Review
-							</a>
-
+							</HashLink>
 							{/* Home Page subsection */}
-
 							<CustomLink className="nav-link" to="/blogs">
 								Blogs
 							</CustomLink>
@@ -108,23 +120,6 @@ const Header = () => {
 							</CustomLink>
 						</Form>
 					</Nav>
-					{/* <Form className="d-flex collapse">
-            <CustomLink className="nav-link search-box" to="">
-              <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-            </CustomLink>
-            <CustomLink className="nav-link facebook" to="">
-              <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
-            </CustomLink>
-            <CustomLink className="nav-link twitter" to="">
-              <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-            </CustomLink>
-            <CustomLink className="nav-link instagram" to="">
-              <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-            </CustomLink>
-            <CustomLink className="nav-link dribble" to="">
-              <FontAwesomeIcon icon={faDribbble}></FontAwesomeIcon>
-            </CustomLink>
-          </Form> */}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>

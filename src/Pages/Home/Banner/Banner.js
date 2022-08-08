@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { forwardRef } from "react";
 import { NavLink } from "react-bootstrap";
 import "./Banner.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,9 +14,9 @@ import Works from "../Works/Works";
 import Countdown from "../Countdown/Countdown";
 import WorkProgress from "../WorkProgress/WorkProgress";
 
-const Banner = () => {
-	const elRef = useRef(null);
-	const executeScroll = () => elRef.current.scrollIntoView();
+const Banner = forwardRef((props, ref) => {
+	// const { countdownRef, galleryRef } = innerRef.current;
+
 	return (
 		<>
 			<header className="header">
@@ -68,14 +68,12 @@ const Banner = () => {
 			<Services />
 			<Works />
 			<Countdown />
-			<div style={{ height: 600 }} /> {/* just to demonstrate scroll*/}
-			<div ref={elRef}>Element to scroll to</div>
-			{/* Attach ref object to a dom element */}
-			<div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
-			<button onClick={executeScroll}>Click to scroll </button>
+			{/* <div ref={ref}>
+				<h1>Results</h1>
+			</div> */}
 			<WorkProgress />
 		</>
 	);
-};
+});
 
 export default Banner;

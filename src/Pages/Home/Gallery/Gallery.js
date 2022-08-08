@@ -3,7 +3,7 @@ import "./Gallery.css";
 import { motion } from "framer-motion";
 import Slider from "../../Shared/Slider/Slider";
 
-const Gallery = () => {
+const Gallery = (props) => {
 	const [gallery, setGallery] = useState([]);
 	const [filter, setFilter] = useState([]);
 	const [notFiltered, setNotFiltered] = useState(true);

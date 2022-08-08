@@ -4,7 +4,6 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 function TestimonialDetails({ testiMonialDetail }) {
 	const { name, address, description } = testiMonialDetail;
-	console.log("testiMonialDetail" + testiMonialDetail);
 	return (
 		<div className="item">
 			<div className="shadow-effect">

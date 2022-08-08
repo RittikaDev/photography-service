@@ -15,6 +15,7 @@ function Testimonials(props) {
 				"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
 			address: "USA",
 			img: "https://i.ibb.co/z7Kp6yr/np-file-33188.jpg",
+			_key: "1",
 		},
 		{
 			name: "Steve Burns",
@@ -22,6 +23,7 @@ function Testimonials(props) {
 				"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
 			address: "USA",
 			img: "https://i.ibb.co/CP5sj7g/2856040-58866808-2560-1440.jpg",
+			_key: "2",
 		},
 		{
 			name: "Kevin Canlas",
@@ -29,6 +31,7 @@ function Testimonials(props) {
 				"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.",
 			address: "USA",
 			img: "https://i.ibb.co/10SYccm/1552313010-354215-noticia-normal.jpg",
+			_key: "3",
 		},
 	];
 	//Owl Carousel Settings

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useRef, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer } from "react-toastify";
@@ -40,7 +40,6 @@ function App() {
 		setSelectedArray(selectedArr);
 		let selectedList = [...selectedProductList];
 		const exists = selectedList.find((item) => item.id === id);
-		console.log(exists);
 		if (!exists) {
 			selectedList = [...selectedProductList, selected];
 		} else {
@@ -50,8 +49,6 @@ function App() {
 		setSelectedProductList(selectedList);
 		setCartItems(selectedList.length);
 	};
-	console.log(selectedProductList);
-	console.log(cartItems);
 	return (
 		<Context.Provider
 			value={{
@@ -66,6 +63,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Banner />}></Route>
 				<Route path="/banner" element={<Banner />}></Route>
+
 				<Route path="/about" element={<About />}></Route>
 				<Route
 					path="/services/:id"
