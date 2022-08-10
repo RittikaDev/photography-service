@@ -18,11 +18,14 @@ import Cart from "./Pages/Cart/Cart";
 export const Context = createContext([]);
 function App() {
 	const [productlist, setProductlist] = useState([]);
-	const [changeIconID, setChangeIconID] = useState([]);
-	const [colorIconID, setColorIconID] = useState([]);
-	const [selectedArray, setSelectedArray] = useState([]);
+
+	// Add To Cart
 	const [selectedProductList, setSelectedProductList] = useState([]);
 	const [cartItems, setCartItems] = useState(0);
+
+	// Add To Bucket List
+	const [addedToBucket, setAddedToBucket] = useState([]);
+	const [bucketList, setBucketList] = useState(0);
 
 	useEffect(() => {
 		fetch("data.json")
@@ -31,36 +34,42 @@ function App() {
 				setProductlist(data);
 			});
 	}, []);
-
 	const addToCart = (id) => {
-		const newIcons = [...changeIconID, id];
-		const colorIcons = [...colorIconID, id];
-		setChangeIconID(newIcons);
-		setColorIconID(colorIcons);
+		cartBucketMain(
+			id,
+			selectedProductList,
+			setSelectedProductList,
+			setCartItems
+		);
+	};
+
+	const addToBucket = (id) => {
+		cartBucketMain(id, addedToBucket, setAddedToBucket, setBucketList);
+	};
+
+	// Main Functionaly of Bucket List & Add To Cart
+	const cartBucketMain = (id, selectedState, setSelectedState, setCart) => {
 		let selected = productlist.find((service) => service.id === id);
-		selected.icon = "true";
-		let selectedArr = [...selectedArray, selected];
-		setSelectedArray(selectedArr);
-		let selectedList = [...selectedProductList];
+		let selectedList = [...selectedState];
 		const exists = selectedList.find((item) => item.id === id);
 		if (!exists) {
-			selectedList = [...selectedProductList, selected];
+			selectedList = [...selectedState, selected];
 		} else {
-			selectedList = [...selectedProductList];
+			selectedList.splice(selectedList.indexOf(exists), 1);
 		}
-
-		setSelectedProductList(selectedList);
-		setCartItems(selectedList.length);
+		setSelectedState(selectedList);
+		setCart(selectedList.length);
 	};
 	return (
 		<Context.Provider
 			value={{
 				productlist,
-				addToCart,
-				changeIconID,
-				colorIconID,
 				cartItems,
+				bucketList,
 				selectedProductList,
+				addedToBucket,
+				addToBucket,
+				addToCart,
 			}}
 		>
 			<Header />
@@ -80,7 +89,7 @@ function App() {
 				<Route path="/blogs" element={<Blogs />}></Route>
 				<Route path="/login" element={<Wrapper />}></Route>
 				<Route path="/contact" element={<Contact />}></Route>
-				<Route path="/cart" element={<Cart />}></Route>
+				<Route path="/cart/:id" element={<Cart />}></Route>
 				<Route path="*" element={<NotFound />}></Route>
 			</Routes>
 

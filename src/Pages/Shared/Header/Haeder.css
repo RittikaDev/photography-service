@@ -23,7 +23,6 @@
 }
 .nav-link {
 	font-size: 18px;
-
 	margin: 10px 6px;
 	color: white !important;
 	font-family: "Poppins", sans-serif;
@@ -47,5 +46,10 @@
 	}
 	form {
 		justify-content: center;
+	}
+}
+@media (max-width: 768px) {
+	.header-form {
+		display: block !important;
 	}
 }

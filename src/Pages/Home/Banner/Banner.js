@@ -68,9 +68,6 @@ const Banner = forwardRef((props, ref) => {
 			<Services />
 			<Works />
 			<Countdown />
-			{/* <div ref={ref}>
-				<h1>Results</h1>
-			</div> */}
 			<WorkProgress />
 		</>
 	);

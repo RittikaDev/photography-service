@@ -74,3 +74,8 @@
 .owl-carousel .owl-dots.disabled {
 	display: block !important;
 }
+@media (max-width: 768px) {
+	.testimonials {
+		margin-top: 26rem !important;
+	}
+}

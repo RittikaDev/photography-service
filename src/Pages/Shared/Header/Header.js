@@ -8,13 +8,13 @@ import CustomLink from "../../CustomLink/CustomLink";
 import logo from "../../../Images/logo5.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../../App";
 
 import { HashLink } from "react-router-hash-link";
 
 const Header = (ref) => {
-	const { cartItems } = useContext(Context);
+	const { cartItems, bucketList } = useContext(Context);
 	const [user] = useAuthState(auth);
 
 	useEffect(() => {}, [ref]);
@@ -41,7 +41,7 @@ const Header = (ref) => {
 				<Navbar.Toggle aria-controls="navbarScroll" className="text-light" />
 				<Navbar.Collapse id="navbarScroll navbar">
 					<Nav className="ms-auto my-1 my-lg-0" navbarScroll>
-						<Form className="d-flex collapse">
+						<Form className="header-form d-flex collapse">
 							<CustomLink to="/banner" className="nav-link">
 								Home
 							</CustomLink>
@@ -99,7 +99,7 @@ const Header = (ref) => {
 							)}
 							<CustomLink
 								className="nav-link"
-								to="/cart"
+								to="/cart/1"
 								style={{ margin: "6px 6px" }}
 							>
 								<FontAwesomeIcon
@@ -116,6 +116,28 @@ const Header = (ref) => {
 									}}
 								>
 									{cartItems}
+								</span>
+							</CustomLink>
+							<CustomLink
+								className="nav-link"
+								to="/cart/2"
+								style={{ margin: "7px 6px" }}
+							>
+								<FontAwesomeIcon
+									icon={faHeart}
+									style={{
+										fontSize: "18px",
+										color: "#dc143c",
+									}}
+								/>
+								<span
+									style={{
+										verticalAlign: "super",
+										fontSize: "13px",
+										marginLeft: "2px",
+									}}
+								>
+									{bucketList}
 								</span>
 							</CustomLink>
 						</Form>

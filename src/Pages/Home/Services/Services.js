@@ -7,10 +7,16 @@ import {
 	faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../../App";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-	const { productlist, addToCart, changeIconID, colorIconID } =
-		useContext(Context);
+	const {
+		productlist,
+		selectedProductList,
+		addToBucket,
+		addToCart,
+		addedToBucket,
+	} = useContext(Context);
 
 	return (
 		<div className="container body">
@@ -35,7 +41,7 @@ const Services = () => {
 									addToCart(service.id);
 								}}
 							>
-								{changeIconID.includes(service.id) ? (
+								{selectedProductList.includes(service) ? (
 									<FontAwesomeIcon
 										icon={faCheck}
 										className="service-icon"
@@ -51,14 +57,14 @@ const Services = () => {
 						<div className="text-center mx-auto ms-1">
 							<span
 								onClick={() => {
-									addToCart(service.id);
+									addToBucket(service.id);
 								}}
 							>
 								<FontAwesomeIcon
 									className="service-icon"
 									icon={faHeart}
 									style={{
-										color: colorIconID.includes(service.id) ? "red" : "",
+										color: addedToBucket.includes(service) ? "red" : "",
 									}}
 								></FontAwesomeIcon>
 							</span>
@@ -67,11 +73,11 @@ const Services = () => {
 					{/* <ul className="sci">
 						<p className="text-center px-auto">{service.description}</p>
 					</ul> */}
-					{/* <ul className="scis me-4 pe-2">
+					<ul className="scis me-4 pe-2">
 						<Link className="button btnb" to={"/services/" + service.id}>
 							Checkout
 						</Link>
-					</ul> */}
+					</ul>
 				</div>
 			))}
 		</div>

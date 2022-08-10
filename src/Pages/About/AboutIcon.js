@@ -5,7 +5,7 @@ import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
 function AboutIcon({ heading, text }) {
 	return (
 		<div className="row">
-			<div className="col-lg-10 mb-3">
+			<div className="about-start col-lg-10 mb-3">
 				<p
 					className="text-end fw-bold"
 					style={{ marginTop: "-3px", marginBottom: "-10px" }}

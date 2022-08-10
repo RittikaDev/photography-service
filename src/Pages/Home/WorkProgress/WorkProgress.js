@@ -1,5 +1,5 @@
 import React from "react";
-import WorkProgressBoiler from "../WokProgressBoiler/WorkProgressBoiler";
+import WorkProgressBoiler from "./WokProgressBoiler/WorkProgressBoiler";
 import "./WorkProgress.css";
 
 function WorkProgress() {

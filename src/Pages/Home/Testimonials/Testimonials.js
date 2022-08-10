@@ -3,9 +3,9 @@ import "./Testimonials.css";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import TestimonialDetails from "../TestimonialDetails";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import TestimonialDetails from "./TestimonialDetails";
 
 function Testimonials(props) {
 	const testiMonials = [
